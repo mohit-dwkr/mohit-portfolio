@@ -27,7 +27,7 @@ const Contact = () => {
     }
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+ const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
 
@@ -44,21 +44,35 @@ const Contact = () => {
       return;
     }
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-    setFormData({ name: '', email: '', message: '' });
-    setIsSubmitting(false);
-    alert('Message sent successfully!');
+    // Netlify Submission Logic
+    const formDataObject = new FormData();
+    formDataObject.append("form-name", "contact");
+    formDataObject.append("name", formData.name);
+    formDataObject.append("email", formData.email);
+    formDataObject.append("message", formData.message);
+
+    try {
+      await fetch("/", {
+        method: "POST",
+        body: formDataObject,
+      });
+      setFormData({ name: '', email: '', message: '' });
+      alert('Message sent successfully!');
+    } catch (error) {
+      alert('Error sending message. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleWhatsApp = () => {
-    const phone = '1234567890'; // Replace with actual number
-    const message = encodeURIComponent('Hello! I would like to connect with you.');
+    const phone = '919630955951'; // Replace with actual number
+    const message = encodeURIComponent('Hello! I need a website .');
     window.open(`https://wa.me/${phone}?text=${message}`, '_blank');
   };
 
   const handleEmail = () => {
-    window.location.href = 'mailto:hello@alexchen.dev';
+    window.location.href = 'mailto:diwakarmohit0007@gmail.com';
   };
 
   return (
@@ -74,29 +88,37 @@ const Contact = () => {
           {/* Contact Form */}
           <div className="card-elevated p-8 md:p-10">
             <h3 className="heading-card mb-6">Send a Message</h3>
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div>
-                <label
-                  htmlFor="name"
-                  className="block text-sm font-medium mb-2"
-                >
-                  Name
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  className={`w-full px-4 py-3 rounded-lg border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring transition-all ${
-                    errors.name ? 'border-destructive' : 'border-input'
-                  }`}
-                  placeholder="Your name"
-                />
-                {errors.name && (
-                  <p className="mt-1 text-sm text-destructive">{errors.name}</p>
-                )}
-              </div>
+           <form 
+  onSubmit={handleSubmit} 
+  name="contact" 
+  data-netlify="true" 
+  className="space-y-6"
+>
+  {/* --- 2. Ye hidden field React/Netlify ke liye compulsory hai --- */}
+  <input type="hidden" name="form-name" value="contact" />
+
+  <div>
+    <label
+      htmlFor="name"
+      className="block text-sm font-medium mb-2"
+    >
+      Name
+    </label>
+    <input
+      type="text"
+      id="name"
+      name="name" // Dhyan rakhein ye name "name" hi ho
+      value={formData.name}
+      onChange={handleChange}
+      className={`w-full px-4 py-3 rounded-lg border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring transition-all ${
+        errors.name ? 'border-destructive' : 'border-input'
+      }`}
+      placeholder="Your name"
+    />
+    {errors.name && (
+      <p className="mt-1 text-sm text-destructive">{errors.name}</p>
+    )}
+  </div>
 
               <div>
                 <label
@@ -192,7 +214,7 @@ const Contact = () => {
                 </div>
                 <div className="text-left">
                   <div className="font-medium">Send an Email</div>
-                  <div className="text-small">hello@alexchen.dev</div>
+                 <div className="text-small">diwakarmohit0007@gmail.com</div>
                 </div>
               </button>
             </div>

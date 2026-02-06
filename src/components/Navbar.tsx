@@ -42,7 +42,7 @@ const Navbar = () => {
           onClick={(e) => handleNavClick(e, '#home')}
           className="text-lg font-semibold tracking-tight text-foreground hover:text-muted-foreground transition-colors"
         >
-          Alex Chen
+          Mohit Diwakar
         </a>
 
         {/* Navigation Links */}

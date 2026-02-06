@@ -4,26 +4,26 @@ const projects = [
   {
     title: 'E-Commerce Platform',
     description:
-      'A full-featured online store with cart functionality, payment integration, and responsive design.',
-    image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop',
-    liveUrl: '#',
-    sourceUrl: '#',
+      'A full-featured online store with cart functionality, Login system, and responsive design.',
+    image: 'p-1.png',
+    liveUrl: 'https://icommerce-by-mohit.netlify.app/',
+    sourceUrl: 'https://github.com/mohit-dwkr/icommerce',
   },
   {
-    title: 'Task Management App',
+    title: 'i Shop website',
     description:
-      'Collaborative project management tool with real-time updates and intuitive drag-and-drop interface.',
-    image: 'https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=400&fit=crop',
-    liveUrl: '#',
-    sourceUrl: '#',
+      'A frontend e commerce website which is made with frontecnd technologies.',
+    image: 'p-2.png',
+    liveUrl: 'https://ishop-by-mohit.netlify.app/',
+    sourceUrl: 'https://github.com/mohit-dwkr/iShop',
   },
   {
-    title: 'Analytics Dashboard',
+    title: 'restaurant website',
     description:
-      'Interactive data visualization dashboard with customizable widgets and export capabilities.',
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop',
-    liveUrl: '#',
-    sourceUrl: '#',
+      'A coffe shop website which is frontend website for cafes nad restaurants.',
+    image: 'p-3.png',
+    liveUrl: 'https://coffee-website-by-mohit.netlify.app/',
+    sourceUrl: 'https://github.com/mohit-dwkr/coffee-website',
   },
 ];
 

@@ -1,4 +1,4 @@
-import profilePhoto from '@/assets/profile-photo.jpg';
+import profilePhoto from '@/assets/mohit-photo.jpg';
 
 const Hero = () => {
   const handleNavClick = (e: React.MouseEvent<HTMLButtonElement>, href: string) => {
@@ -7,6 +7,12 @@ const Hero = () => {
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
+  };
+
+  const handleWhatsApp = () => {
+    const phone = '919630955951'; // Aapka number
+    const message = encodeURIComponent("Hello Mohit! I saw your portfolio and I'd like to connect.");
+    window.open(`https://wa.me/${phone}?text=${message}`, '_blank');
   };
 
   return (
@@ -28,23 +34,21 @@ const Hero = () => {
             </div>
 
             <h1
-              className="heading-display opacity-0 animate-fade-in"
+              className="heading-display opacity-0 animate-fade-in leading-[1.1] tracking-tight mb-4"
               style={{ animationDelay: '0.2s' }}
             >
-              Crafting Digital
+              I build modern websites
               <br />
-              Experiences That
-              <br />
-              <span className="text-muted-foreground">Deliver.</span>
+              <span className="text-muted-foreground italic font-normal">
+                and systems for businesses & individuals.
+              </span>
             </h1>
 
             <p
-              className="text-body max-w-lg opacity-0 animate-fade-in"
+              className="text-body max-w-lg opacity-0 animate-fade-in text-zinc-500 leading-snug mt-2"
               style={{ animationDelay: '0.3s' }}
             >
-              Full Stack Developer specializing in React, Tailwind CSS, and
-              scalable web solutions. I transform complex problems into elegant,
-              user-centric digital experiences.
+              Hi, I'm <span className="font-semibold text-zinc-900">Mohit</span>. I build clean, fast, and professional websites that help your business grow and look great on every screen.
             </p>
 
             <div
@@ -58,10 +62,10 @@ const Hero = () => {
                 View Projects
               </button>
               <button
-                onClick={(e) => handleNavClick(e, '#contact')}
+                onClick={handleWhatsApp}
                 className="btn-secondary"
               >
-                Connect Now
+                WhatsApp Me
               </button>
             </div>
           </div>
