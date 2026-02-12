@@ -26,14 +26,14 @@ const projects = [
     liveUrl: 'https://ishop-by-mohit.netlify.app/',
     sourceUrl: 'https://github.com/mohit-dwkr/iShop',
   },
-  {
-    title: 'restaurant website',
-    description:
-      'A coffe shop website which is frontend website for cafes nad restaurants.',
-    image: 'p-3.png',
-    liveUrl: 'https://coffee-website-by-mohit.netlify.app/',
-    sourceUrl: 'https://github.com/mohit-dwkr/coffee-website',
-  },
+  // {
+  //   title: 'restaurant website',
+  //   description:
+  //     'A coffe shop website which is frontend website for cafes nad restaurants.',
+  //   image: 'p-3.png',
+  //   liveUrl: 'https://coffee-website-by-mohit.netlify.app/',
+  //   sourceUrl: 'https://github.com/mohit-dwkr/coffee-website',
+  // },
 ];
 
 const Projects = () => {
