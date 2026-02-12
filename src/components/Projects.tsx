@@ -1,6 +1,15 @@
 import { ExternalLink, Github } from 'lucide-react';
 
 const projects = [
+ {
+    title: 'Cafe Shop Website',
+    description:
+      "A cafe website with secure admin authentication, real-time content management via Supabase, and responsive modern design.",
+    image: 'og-image copy.png',
+    liveUrl: 'https://cafe-shops.netlify.app/',
+    sourceUrl: 'https://github.com/mohit-dwkr/cafe',
+  },
+
   {
     title: 'E-Commerce Platform',
     description:
