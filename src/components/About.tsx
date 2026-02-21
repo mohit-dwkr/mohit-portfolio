@@ -10,7 +10,7 @@ const processSteps = [
 const socialLinks = [
   { name: 'LinkedIn', icon: Linkedin, url: 'https://www.linkedin.com/in/mohit-a83472367?utm_source=share_via&utm_content=profile&utm_medium=member_android', color: 'hover:bg-[#0077b5] hover:text-white' },
   { name: 'GitHub', icon: Github, url: 'https://github.com/mohit-dwkr', color: 'hover:bg-[#333] hover:text-white' },
-  { name: 'Instagram', icon: Instagram, url: 'https://instagram.com/code_by_mohit', color: 'hover:bg-[#e1306c] hover:text-white' },
+  { name: 'Instagram', icon: Instagram, url: 'https://instagram.com/codeby.mohit', color: 'hover:bg-[#e1306c] hover:text-white' },
   { name: 'Facebook', icon: Facebook, url: 'https://www.facebook.com/share/1GrGjwDjxm/', color: 'hover:bg-[#1877f2] hover:text-white' },
   { name: 'Discord', icon: MessageSquare, url: 'https://discord.gg/mohit_dwkr', color: 'hover:bg-[#5865F2] hover:text-white' },
 ];
