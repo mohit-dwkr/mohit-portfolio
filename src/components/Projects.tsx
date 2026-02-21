@@ -2,6 +2,15 @@ import { ExternalLink, Github } from 'lucide-react';
 
 const projects = [
  {
+    title: 'Coaching Management System',
+    description:
+      "A modern, fully dynamic coaching website with secure admin panel, real-time database integration, and scalable architecture designed to simplify institute management.",
+    image: 'og-image copy 2.png',
+    liveUrl: 'https://coaching-class.netlify.app/',
+    sourceUrl: 'https://github.com/mohit-dwkr/coaching',
+  },
+
+ {
     title: 'Cafe Shop Website',
     description:
       "A cafe website with secure admin authentication, real-time content management via Supabase, and responsive modern design.",
